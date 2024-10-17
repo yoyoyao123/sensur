@@ -19,15 +19,15 @@
       
         <main class="main-content">
             <div class="rect">
-             <img src="assets/image1.jpg" alt="Image 1" style="width: 100%; height: auto;">
+                <img src="assets/image1.jpg" alt="Image 1" style="width: 100%; height: auto;">
             </div>
-          <div class="text-reveal-container">
-  <div *ngFor="let text of texts; let i = index" 
-       class="text" 
-       [ngStyle]="{'animation-delay': (i * 5) + 's'}">
-    {{ text }}
-  </div>
-</div>
+            <div class="text-reveal-container">
+                <div *ngFor="let text of texts; let i = index" 
+                    class="text" 
+                    [ngStyle]="{'animation-delay': (i * 5) + 's'}">
+                    {{ text }}
+                </div>
+            </div>
         </main>
     </div>
 </body>
