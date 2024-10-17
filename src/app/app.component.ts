@@ -11,6 +11,6 @@ import { RouterOutlet } from '@angular/router';
 })
 export class AppComponent {
 
-    texts: string[] = ["COMMUNICATION 360°", "VISION", "PARTAGE"];
+    texts: string[] = ["COMMUNICATION 360°", "PARTAGE" ,"VISION" , "CREATION"];
   }
 
