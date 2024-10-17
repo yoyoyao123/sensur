@@ -22,8 +22,8 @@
                 <img src="assets/image1.jpg" alt="Image 1" style="width: 100%; height: auto;">
             </div>
             <div class="text-reveal-container">
-                <div class="text">{{ currentText }}</div>
-            </div>          
+                <div *ngFor="let text of texts; let i = index" class="text" [class.active]="i === currentTextIndex" [class.exit]="i === (currentTextIndex - 1 + texts.length) % texts.length">{{ text }}</div>
+            </div>         
         </main>
     </div>
 </body>

@@ -12,22 +12,22 @@ import { RouterOutlet } from '@angular/router';
 export class AppComponent {
   texts: string[] = ["COMMUNICATION 360°", "PARTAGE", "VISION", "CREATION"];
   currentTextIndex: number = 0;
-  currentText: string = '';
+  private intervalId: any;
 
   ngOnInit(): void {
-    this.currentText = this.texts[this.currentTextIndex];
-  }
-
-  ngAfterViewInit(): void {
     this.startTextRotation();
   }
 
-  startTextRotation(): void {
-    setInterval(() => {
-      this.currentTextIndex = (this.currentTextIndex + 1) % this.texts.length;
-      this.currentText = this.texts[this.currentTextIndex];
-    }, 5000);
+  ngOnDestroy(): void {
+    if (this.intervalId) {
+      clearInterval(this.intervalId);
+    }
   }
 
+  startTextRotation(): void {
+    this.intervalId = setInterval(() => {
+      this.currentTextIndex = (this.currentTextIndex + 1) % this.texts.length;
+    }, 2000);
+  }
 }
 
