@@ -112,10 +112,11 @@ nav ul li:hover {
   top: -50px;       /* Positionne correctement le triangle */
   left: -30px;
 }/* Styles pour le conteneur des textes */
+
 /* Styles pour le conteneur des textes */
 .text-reveal-container {
-  position: relative;  
-  width: 300px; /* Ajustez cette valeur pour définir la largeur du conteneur de texte */
+  position: relative;
+  width: 500px; /* Ajustez cette valeur pour définir la largeur du conteneur de texte */
   height: 50px;  /* Hauteur fixe pour les textes */
   overflow: hidden; /* Cache le texte en dehors de la zone visible */
   text-align: left; /* Aligne le texte à gauche */
@@ -123,30 +124,30 @@ nav ul li:hover {
 }
 
 .text {
-  position: absolute; /* Positionne tous les textes au même endroit */
-  left: 0; /* Aligne le texte à gauche */
-  transform: translateX(-100%); /* Cache le texte à gauche au début */
-  opacity: 0; /* Le texte est transparent au début */
+  position: absolute;
+  left: 0;
+  transform: translateX(-100%);
+  opacity: 0;
   font-size: 36px;
   font-weight: bold;
-  animation: revealText 5s forwards; /* Animation pour révéler le texte */
+  animation: revealText 5s forwards infinite; /* Ajout de 'infinite' pour la boucle */
 }
 
 @keyframes revealText {
   0% {
-    transform: translateX(-100%); /* Le texte commence hors de la vue, à gauche */
-    opacity: 0; /* Transparent au début */
+    transform: translateX(-100%);
+    opacity: 0;
   }
   20% {
-    transform: translateX(0); /* Le texte entre à sa position normale */
-    opacity: 1; /* Il devient visible */
+    transform: translateX(0);
+    opacity: 1;
   }
   80% {
-    transform: translateX(0); /* Il reste à sa position normale */
-    opacity: 1; /* Il reste visible */
+    transform: translateX(0);
+    opacity: 1;
   }
   100% {
-    transform: translateX(100%); /* Le texte disparaît à droite à la fin */
-    opacity: 0; /* Il disparaît progressivement */
+    transform: translateX(100%);
+    opacity: 0;
   }
 }
