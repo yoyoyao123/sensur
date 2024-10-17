@@ -1,0 +1,149 @@
+/* styles.css ou App.css */
+
+/* Couleur de fond du body */
+body {
+  background-color: #333; /* Définit la couleur de fond du body */
+  margin: 0; /* Supprime les marges par défaut du body */
+  color: white; /* Change la couleur du texte pour qu'il soit visible sur le fond noir */
+}
+
+/* Styles pour la barre de navigation */
+nav.navbar {
+  display: flex;
+  justify-content: center; /* Centre le contenu horizontalement */
+  align-items: center;
+  background-color: #333;
+  padding: 10px 20px;
+  position: relative; /* Permet de positionner les éléments par rapport à la barre */
+}
+
+/* Style pour le logo */
+.SensureLogoBloc1 {
+  height: 46px;
+  width: 178px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%); /* Centre exactement le logo */
+}
+
+/* Styles pour la liste */
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 40px; /* Augmente l'espace entre les éléments de la liste */
+  flex: 1;
+  justify-content: center; /* Centre les éléments de la liste */
+  margin-top: 100px;
+}
+
+/* Styles pour les éléments de la liste */
+nav ul li {
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  padding: 10px 15px;
+  transition: background-color 0.3s ease;
+}
+
+/* Effet au survol des éléments */
+nav ul li:hover {
+  color: #610ee6;
+  border-radius: 5px;
+}
+
+
+/* Styles responsive pour la barre de navigation */
+@media (max-width: 768px) {
+  nav.navbar {
+    flex-direction: column;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center; /* Centre les éléments de la liste */
+  }
+
+  .SensureLogoBloc1 {
+    position: static;
+    transform: none;
+    margin-bottom: 10px; /* Espacement supplémentaire pour le logo */
+  }
+}
+/* Styles pour le contenu principal */
+.main-content {
+  display: flex;
+  flex-direction: column;    /* Aligne les éléments en colonne */
+  justify-content: center;   /* Centre verticalement */
+  align-items: center;       /* Centre horizontalement */
+  height: 100vh;             /* Hauteur de l'écran complète */
+  background-color: #333;    /* Fond sombre */
+  text-align: center;
+  color: white;
+  margin-left: 40px;
+  margin-right: 40px;
+  margin-bottom: 1000px;
+}
+
+/* Agrandissement de la div rect */
+.rect {
+  background: white;
+  height: 300px;    /* Ajustez la hauteur selon vos besoins */
+  width: 1000px;     /* Ajustez la largeur selon vos besoins */
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 150px;
+  
+}
+
+/* Triangle dans le coin */
+.rect:after {
+  content: "";
+  background-color: #333;
+  height: 180px;    /* Ajuste la taille du triangle */
+  width: 50px;
+  transform: rotate(45deg);
+  position: absolute;
+  top: -50px;       /* Positionne correctement le triangle */
+  left: -30px;
+}
+.text {
+  font-size: 36px; /* Taille de police par défaut */
+  font-weight: bold;
+  opacity: 0;
+  position: absolute; /* Pour superposer les textes */
+  width: 100%; /* Prend toute la largeur du conteneur */
+  animation: reveal 3s forwards; /* Durée d'animation totale */
+  animation-iteration-count: infinite; /* Fait tourner l'animation indéfiniment */
+}
+
+/* Animations */
+@keyframes reveal {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  20% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  80% {
+    opacity: 1; /* Garde le texte visible */
+  }
+  100% {
+    opacity: 0; /* Disparaît avant le prochain texte */
+    transform: translateX(-100%);
+  }
+}
+
+
+
+
+
+
