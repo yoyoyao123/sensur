@@ -115,11 +115,12 @@ nav ul li:hover {
 /* Styles pour le conteneur des textes */
 .text-reveal-container {
   position: relative;  
-  width: 300px; /* Ajustez cette valeur pour définir la largeur du conteneur de texte */
   height: 50px;  /* Hauteur fixe pour les textes */
   overflow: hidden; /* Cache le texte en dehors de la zone visible */
   text-align: left; /* Aligne le texte à gauche */
   margin-right: 40px; /* Pour aligner à gauche du .rect */
+  width: auto; /* Changez à auto pour ajuster automatiquement */
+    max-width: 450px; /* Définissez une largeur maximale si nécessaire */
 }
 
 .text {

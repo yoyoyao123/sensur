@@ -7,28 +7,16 @@
             <nav class="navbar">
                 <img class="SensureLogoBloc1" src="assets/logo.png" alt="logo"alt="Placeholder Image">
                 <ul>
-                    <li class="Accueil">ACCUEIL</li>
-                    <li class="NosServices">NOS SERVICES</li>
+                    <li class="Accueil" routerLink="acceuil" >ACCUEIL</li>
+                    <li class="NosServices"routerLink="NosService">NOS SERVICES</li>
                     <li class="LAgence">L’AGENCE</li>
                     <li class="ContactezNous">CONTACTEZ-NOUS</li>
                     <li class="Portfolio">PORTFOLIO</li>
                 </ul>
             </nav>
         </header>
-        <!-- Main Content -->
-      
-        <main class="main-content">
-            <div class="rect">
-             <img src="assets/image1.jpg" alt="Image 1" style="width: 100%; height: auto;">
-            </div>
-          <div class="text-reveal-container">
-  <div *ngFor="let text of texts; let i = index" 
-       class="text" 
-       [ngStyle]="{'animation-delay': (i * 5) + 's'}">
-    {{ text }}
-  </div>
+
+<router-outlet></router-outlet>
 </div>
-        </main>
-    </div>
 </body>
 

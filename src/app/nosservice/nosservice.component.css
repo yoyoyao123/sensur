@@ -1,0 +1,155 @@
+body {
+    display: flex; /* Utilise Flexbox pour centrer le conteneur */
+    justify-content: center; /* Centre horizontalement */
+    align-items: center; /* Centre verticalement */
+    margin: 0; /* Supprime la marge par défaut du corps */
+}
+
+/* Style pour le titre BRANDING & DESIGN */
+p.title {
+    margin-left: 20px;
+    font-size: 1.5em; /* Ajuste la taille du texte */
+    line-height: 1.2; /* Ajuste l'espacement entre les lignes */
+    text-align: left;
+}
+
+/* Style pour la description */
+/* Style pour la description */
+/* Style pour la description */
+p.description {
+    margin-top: 10px; /* Espacement entre le titre et la description */
+    font-size: 0.85em; /* Réduction de la taille du texte */
+    line-height: 1.4; /* Espacement entre les lignes */
+    text-align: left; /* Aligne le texte à gauche */
+    margin-left: 10px; /* Ajuste le décalage à gauche si nécessaire */
+    
+}
+
+
+div.carre {
+    width: 880px; /* Largeur du conteneur agrandie */
+    height: 880px; /* Hauteur du conteneur agrandie */
+    display: flex; /* Utilise Flexbox pour aligner les divs */
+    flex-wrap: wrap; /* Permet le passage à la ligne */
+    margin-top: 80px;
+    
+    justify-content: center; /* Centre verticalement le contenu */
+    align-items: center; /* Centre horizontalement le contenu */
+    text-align: center; /* Centre le texte dans les paragraphes */
+    position: relative; /* Position relative pour le triangle */
+}
+
+/* Couleurs des carrés selon l'alternance demandée */
+div.carre div:nth-child(1),
+div.carre div:nth-child(4),
+div.carre div:nth-child(8),
+div.carre div:nth-child(5),
+div.carre div:nth-child(9){
+    background-color: #ffffff; /* Carré 1, 4 et 8 en blanc */
+    border-top: none; /* Enlève la bordure supérieure */
+    position: relative; /* Nécessaire pour le positionnement absolu des triangles */
+}
+
+/* Triangle dans le coin supérieur gauche du carré 1 */
+div.carre div:nth-child(1):before {
+    content: "";
+    background-color: #333; /* Couleur du triangle */
+    height: 150px; /* Ajuste la taille du triangle */
+    width: 150px;
+    transform: rotate(45deg); /* Rotation pour créer un triangle */
+    position: absolute; /* Positionne le triangle */
+    top: -75px; /* Positionne le triangle en haut à gauche */
+    left: -75px;
+}
+div.carre div:nth-child(9):before {
+    content: "";
+    background-color: #333; /* Couleur du triangle */
+    height: 200px; /* Ajuste la taille du triangle */
+    width: 200px;
+    transform: rotate(45deg); /* Rotation pour créer un triangle */
+    position: absolute; /* Positionne le triangle */
+    top: -100px; /* Positionne le triangle en haut à gauche */
+    left: -100px;
+}
+
+div.carre div:nth-child(5):before {
+    content: "";
+    background-color: #333; /* Couleur du triangle */
+    height: 200px; /* Ajuste la taille du triangle */
+    width: 200px;
+    transform: rotate(45deg); /* Rotation pour créer un triangle */
+    position: absolute; /* Positionne le triangle */
+    top: -100px; /* Positionne le triangle en haut à gauche */
+    left: -100px;
+}
+
+
+/* Triangle dans le coin inférieur droit du carré 4 */
+div.carre div:nth-child(4):before {
+    content: "";
+    background-color: #333; /* Couleur du triangle */
+    height: 200px; /* Ajuste la taille du triangle */
+    width: 200px;
+    transform: rotate(45deg); /* Rotation pour créer un triangle */
+    position: absolute; /* Positionne le triangle */
+    bottom: -100px; /* Positionne le triangle en bas à droite */
+    right: -100px;
+}
+
+/* Triangle dans le coin inférieur droit du carré 8 */
+div.carre div:nth-child(8):before {
+    content: "";
+    background-color: #333; /* Couleur du triangle */
+    height: 200px; /* Ajuste la taille du triangle */
+    width: 200px;
+    transform: rotate(45deg); /* Rotation pour créer un triangle */
+    position: absolute; /* Positionne le triangle */
+    bottom: -100px; /* Positionne le triangle en bas à droite */
+    right: -100px; /* Positionne le triangle en bas à droite */
+}
+
+
+
+div.carre div {
+    width: 420px; /* Largeur des carrés encore agrandie */
+    height: 420px; /* Hauteur des carrés encore agrandie */
+    background-color: #333; /* Définit la couleur de fond du body */
+
+    display: flex; /* Utilise Flexbox pour centrer le contenu */
+    flex-direction: column; /* Aligne les éléments en colonne */
+    justify-content: center; /* Centre le contenu verticalement */
+    align-items: center; /* Centre le contenu horizontalement */
+}
+
+/* Couleurs des carrés selon l'alternance demandée */
+div.carre div:nth-child(1),
+div.carre div:nth-child(4),
+div.carre div:nth-child(5),
+div.carre div:nth-child(8),
+div.carre div:nth-child(9) {
+    background-color: #ffffff; /* Carrés 1, 4, 5, 8, et 9 en blanc */
+    
+}
+
+div.carre div:nth-child(2),
+div.carre div:nth-child(3),
+div.carre div:nth-child(6),
+div.carre div:nth-child(7),
+div.carre div:nth-child(10) {
+    background-color: #333; /* Les autres carrés en noir */
+}
+
+/* Styles pour les images */
+div.carre div img {
+    max-width: 90%; /* Ajustez la taille de l'image pour s'adapter au carré */
+    max-height: 80%; /* Ajustez la hauteur de l'image */
+}
+
+/* Styles pour le texte */
+div.carre div p {
+    color: #ffffff; /* Couleur du texte en blanc */
+    margin: 0; /* Supprime la marge par défaut */
+    text-align: center; /* Centre le texte */
+    font-size: 24px; /* Augmente la taille de la police */
+    padding: 20px; /* Ajoute plus de padding pour éviter que le texte touche les bords */
+}
